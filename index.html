@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
     <title>CraftMyCV | CV Builder</title>
 </head>
-<body class="flex justify-center">
+<body class="flex justify-center overflow-x-hidden">
     <!------------------- The Div That Contains All Content Website ------------------------>
-    <div class="bg-red- container overflow-hidden">
+    <div class="container ">
         <!-- Header For Website Logo -->
-        <header class="w-[100%] flex justify-center h-[100px] items-center">
+        <header class="w-[100%]  flex justify-center h-[100px] items-center fixed ">
             <div class="logo">
                 <img class="w-[150px]" src="assets/images/logo.svg" alt="">
             </div>
         </header>
         <!-- Main For The HomePage Hero Banner -->
-        <main id="heroPage" class="mx-[100px] flex h-[80vh] max-h-[600px]">
+        <main id="heroPage" class="z-20 bg-white mx-[100px] absolute flex h-[80vh] mt-[100px] max-h-[600px] ">
             <div class=" h-[100%] bg-blue- w-[80%] flex flex-col justify-center gap-4">
                 <div class="text-xl font-bold">
                     <p>33,201 resumes created today</p>
@@ -46,7 +46,7 @@
             </div>
         </main>
         <!-- Main For Showing The Forms -->
-        <main id="TheMainForm" class="hidden mx-[100px] mb-[200px] gap-[25px] flex flex-col h-[80vh] max-h-[600px]">
+        <main id="TheMainForm" class="scale-50 z-0 mx-[100px] mt-[100px]  gap-[25px] flex flex-col h-[80vh] max-h-[600px]">
             <!-- The Title & Progress Bar -->
             <div class="bg-white z-10 sticky top-0 pt-8 w-[100%]">
                 <!-- The Title -->
@@ -54,8 +54,8 @@
                     <h2 id="titleProg"></h2>
                 </div>
                 <!-- The Progress Bar -->
-                <div class="mt-8 w-[100%] h-[10px]  border-blue-500 border-2 rounded-[50px]" >
-                    <div class="bg-blue-500 w-[100px] h-[100%]">
+                <div class="mt-8 w-[100%] h-[10px] border-blue-500 border-2 rounded-[50px]" >
+                    <div id="prgressbar" class="bg-blue-500 w-[100px] h-[100%]">
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 <!-- The Form That Contains all the inputs -->
                 <form class="w-[100%]" action="">
                     <!-- Personal details step -->
-                    <section id="step1" class="mt-[30px] w-[100%] relative mb-[200px]">
+                    <section id="step1" class="mt-[30px] w-[100%] relative mb-[50px]">
                         <div class="inputsContainer grid grid-cols-2 gap-4">
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
                                 <div class="text-2xl font-bold">
@@ -111,7 +111,7 @@
                     </section>
 
                     <!-- Professional Experience step -->
-                    <section id="step2" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                    <section id="step2" class="hidden   w-[100%] relative mb-[50px]">
                         <div class="title justify-between h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>web developer</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
@@ -191,7 +191,7 @@
                     </section>
 
                     <!-- Education -->
-                    <section id="step3" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                    <section id="step3" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
                         <div class="title justify-between h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>Youcode</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
@@ -262,7 +262,7 @@
                     </section>
 
                     <!-- Skills step -->
-                    <section id="step4" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                    <section id="step4" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
                         
                         
 
@@ -324,7 +324,7 @@
                     </section>
 
                     <!-- Languages step -->
-                    <section id="step5" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                    <section id="step5" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
                         
                         
 
@@ -383,7 +383,7 @@
                     </section>
 
                     <!-- Certifications step -->
-                    <section id="step6" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                    <section id="step6" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
                         
                         
 
@@ -446,12 +446,12 @@
                     </section>
 
                     <!-- Professional Summary step -->
-                    <section id="step7" class="hidden mt-[30px] w-[100%] relative mb-[200px]">
+                    <section id="step7" class="hidden mt-[30px] w-[100%] relative mb-[50px]">
                             <div class="inputItem w-[100%] flex flex-col grid-rows-3 gap-6  ">
                                 <div class="text-1xl font-bold">
                                     <label for="">Write 2-4 short, energetic sentences about how great you are. Mention the role and what you did. What were the big achievements? Describe your motivation and list your skills.</label>
                                 </div>
-                                <div class="w-[100%] h-[40px] row-span-3 bg-[#E6E9F1]">
+                                <div class="w-[100%] h-[200px] row-span-3 bg-[#E6E9F1]">
                                     <textarea name="" id="" cols="4"  placeholder="" class="text-xl pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[200px] bg-[#E6E9F1]"></textarea>
                                 </div>
                             </div>
@@ -479,10 +479,10 @@
 
                     <!-- The bUtton for the Next & prev step -->
                     <div class="bg-white   flex justify-end w-[100%] justify-self-end  left-[0px] h-[100px]  gap-6 ">
-                        <button dataStep="0" id="btnPrev" onclick="NextStep(currentStep , currentStep++)" type="button" class="bg-[#1A91F0]  px-[40px]  h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
+                        <button dataStep="0" id="btnPrev" type="button" class="bg-[#1A91F0]  px-[40px] h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
                             Previous
                         </button>
-                        <button dataStep="0" id="btnNext" onclick="NextStep(currentStep , currentStep++)" type="button" class="bg-[#1A91F0] px-[40px]  h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
+                        <button dataStep="1" id="btnNext" type="button" class="bg-[#1A91F0] px-[40px]  h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
                             next
                         </button>
                     </div>

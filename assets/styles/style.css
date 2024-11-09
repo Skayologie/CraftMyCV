@@ -1,0 +1,74 @@
+
+
+.totop {
+    animation: ToTop 1s;
+}
+
+.rmScale {
+    animation: removeScale 1s;
+}
+
+@keyframes Opening {
+    0%{
+        filter: blur(10px);
+        transform: translateX(1000px);
+    }
+    100%{
+        filter: blur(0px);
+        transform: translateX(0px);
+    }
+}
+@keyframes closing {
+    0%{
+        filter: blur(0px);
+        transform: translateX(0px);
+    }
+    100%{
+        filter: blur(10px);
+        transform: translateX(1000px);
+    }
+}
+
+@keyframes ToTop {
+    0%{
+        filter: blur(0px);
+        transform: translateY(0px);
+    }
+    100%{
+        filter: blur(10px);
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes removeScale {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1A91F0;
+    border-radius: 50px;
+  }
+
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1681d8;
+  }
+
