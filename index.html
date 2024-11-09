@@ -3,15 +3,495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Tailwind & Customize Css -->
     <link rel="stylesheet" href="./assets/styles/output.css">
-    <link rel="stylesheet" href="./assets/styles/style.css">       
+    <link rel="stylesheet" href="./assets/styles/style.css">    
+    <!-- Poppins Fonts -->
     <link rel="stylesheet" href="./assets/fonts/poppins.css">       
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
     <title>CraftMyCV | CV Builder</title>
 </head>
-<body>
-    
+<body class="flex justify-center">
+    <!------------------- The Div That Contains All Content Website ------------------------>
+    <div class="bg-red- container overflow-hidden">
+        <!-- Header For Website Logo -->
+        <header class="w-[100%] flex justify-center h-[100px] items-center">
+            <div class="logo">
+                <img class="w-[150px]" src="assets/images/logo.svg" alt="">
+            </div>
+        </header>
+        <!-- Main For The HomePage Hero Banner -->
+        <main id="heroPage" class="mx-[100px] flex h-[80vh] max-h-[600px]">
+            <div class=" h-[100%] bg-blue- w-[80%] flex flex-col justify-center gap-4">
+                <div class="text-xl font-bold">
+                    <p>33,201 resumes created today</p>
+                </div>
+                <div class="w-[90%] font-bold text-7xl">
+                    <h1>98% of resumes fail. Not here.</h1>
+                </div>
+                <div class="">
+                    <p class="text-2xl">Let’s build the resume that gets you hired.</p>
+                </div>
+                <div>
+                    <button id="startCreate" class="bg-[#1A91F0] p-5 px-[30px] text-2xl font-semibold rounded-[6px] text-white hover:bg-blue-900 transition-colors ease-out duration-300" type="button">Create My Resume</button>
+                </div>
+            </div>
+            <div class="w-[50%] bg-green- flex justify-center items-center">
+                <div>
+                    <img class="bg-blue- w-[90%]" src="assets/images/banner.png" alt="">
+                </div>
+            </div>
+        </main>
+        <!-- Main For Showing The Forms -->
+        <main id="TheMainForm" class="hidden mx-[100px] mb-[200px] gap-[25px] flex flex-col h-[80vh] max-h-[600px]">
+            <!-- The Title & Progress Bar -->
+            <div class="bg-white z-10 sticky top-0 pt-8 w-[100%]">
+                <!-- The Title -->
+                <div class="text-4xl font-bold">
+                    <h2 id="titleProg"></h2>
+                </div>
+                <!-- The Progress Bar -->
+                <div class="mt-8 w-[100%] h-[10px]  border-blue-500 border-2 rounded-[50px]" >
+                    <div class="bg-blue-500 w-[100px] h-[100%]">
+                    </div>
+                </div>
+            </div>
+            <!-- Made By Me , Jawad Boulmal -->
+            <div class="flex flex-col items-center mb-[200px]">
+                <!-- The Form That Contains all the inputs -->
+                <form class="w-[100%]" action="">
+                    <!-- Personal details step -->
+                    <section id="step1" class="mt-[30px] w-[100%] relative mb-[200px]">
+                        <div class="inputsContainer grid grid-cols-2 gap-4">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Full Name</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="JawadBoulmal" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Email Address</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input  placeholder="jawadboulmal@gmail.com" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="email" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Phone Number</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="0632773027" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="number" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">LinkedIn Profile (Optional)</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="@jawad-boulmal" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3 ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Portfolio/Website (Optional)</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="https://jawadboulmal.com" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="url" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+
+                    <!-- Professional Experience step -->
+                    <section id="step2" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                        <div class="title justify-between h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <h2>web developer</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Job Title</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Web Developer" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Employer</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Sogé" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">City</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Casablanca" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%]  flex-col gap-3  grid grid-cols-2">
+                                <div class="col-span-1 flex flex-col gap-3">
+                                    <div class="text-2xl font-bold">
+                                        <label for="">Start Date</label>
+                                    </div>
+                                    <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                        <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                    </div>
+                                </div>
+                                <div class="col-span-1 flex flex-col gap-3">
+                                    <div class="text-2xl font-bold">
+                                        <label for="">End Date</label>
+                                    </div>
+                                    <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                        <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3 row-span-2 col-span-2">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Job Description</label>
+                                </div>
+                                <div class="w-[100%] h-[100%]">
+                                    <textarea  class="pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" placeholder="Lorem ipsum dolor sit amet consectetur. Ac malesuada consectetur suspendisse neque lectus tellus mattis risus. Ut nisi malesuada mi scelerisque. Ut ac non senectus amet nunc. Lorem at arcu egestas tempor." name="" id=""></textarea>
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Skills used (Optional)</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Html , Css , Js , Php" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>web developer</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!-- Add More Fields -->
+                        <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
+                            <span class="material-symbols-outlined">add</span><h2></span>Add More Experience</h2>
+                        </div>
+
+                    </section>
+
+                    <!-- Education -->
+                    <section id="step3" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                        <div class="title justify-between h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <h2>Youcode</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">School</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Youcode" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Degree</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Full stack Developer" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">City</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Youssoufia" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="col-span-1 flex flex-col gap-3">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Start Date</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3 row-span-2 col-span-2">
+                                <div class="text-2xl font-bold">
+                                    <label for="">School Description</label>
+                                </div>
+                                <div class="w-[100%] h-[100%]">
+                                    <textarea  class="pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" placeholder="Graduate of YouCode, a prestigious school of programming, where I underwent intensive training and hands-on learning in web development for two years. The comprehensive curriculum equipped me with a solid foundation in programming languages, frameworks, and methodologies essential for a successful career in the field. " name="" id=""></textarea>
+                                </div>
+                            </div>
+                            <div class="col-span-1 flex flex-col gap-3">
+                                <div class="text-2xl font-bold">
+                                    <label for="">End Date</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>Bac Svt</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!-- Add More Fields -->
+                        <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
+                            <span class="material-symbols-outlined">add</span><h2></span>Add More Education Informations</h2>
+                        </div>
+
+                    </section>
+
+                    <!-- Skills step -->
+                    <section id="step4" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                        
+                        
+
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>Html</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>Php</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>Css</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+
+
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <h2>Javascript</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-2 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Skill</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Youcode" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Level</label>
+                                </div>
+                                <div class="cursor-pointer w-[100%] h-[40px] bg-[#E6E9F1] pr-[15px]">
+                                    <select class="font-semibold text-1xl pl-[10px]  w-[100%] h-[100%] bg-[#E6E9F1]" name="" id="">
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediate">Intermediate</option>
+                                        <option value="Advanced">Advanced</option>
+                                        <option value="Expert">Expert</option>
+                                        <option value="Master">Master</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+
+                        <!-- Add More Fields -->
+                        <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
+                            <span class="cursor-pointer material-symbols-outlined">add</span><h2></span class="cursor-pointer">Add More Education Informations</h2>
+                        </div>
+
+                    </section>
+
+                    <!-- Languages step -->
+                    <section id="step5" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                        
+                        
+
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>Arabic</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>English</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!-- Fields -->
+                       
+
+
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <h2>French</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-2 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Language</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="French" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Level</label>
+                                </div>
+                                <div class="outline-white cursor-pointer w-[100%] h-[40px] bg-[#E6E9F1] pr-[15px]">
+                                    <select class="font-semibold text-1xl pl-[10px]  w-[100%] h-[100%] bg-[#E6E9F1]" name="" id="">
+                                        <option value="Beginner">Beginner (A1 - A2)</option>
+                                        <option value="Intermediate">Intermediate (B1 - B2)</option>
+                                        <option value="Advanced">Advanced (C1)</option>
+                                        <option value="Proficient">Proficient (C2)</option>
+                                        <option value="Native">Native / Bilingual</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+
+                        <!-- Add More Fields -->
+                        <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
+                            <span class="cursor-pointer material-symbols-outlined">add</span><h2></span class="cursor-pointer">Add More Languages</h2>
+                        </div>
+
+                    </section>
+
+                    <!-- Certifications step -->
+                    <section id="step6" class="hidden mt-[30px]  w-[100%] relative mb-[200px]">
+                        
+                        
+
+                        <!-- Fields -->
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                            <h2>Html</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+
+
+
+                        <div class="title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <h2>Css</h2>
+                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Certification Name</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Html" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Issuing Organization</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Sololearn" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Certification URL (Optional)</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Url" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="url" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Date Obtained</label>
+                                </div>
+                                <div class="pr-[15px] w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+
+                        <!-- Add More Fields -->
+                        <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
+                            <span class="cursor-pointer material-symbols-outlined">add</span><h2></span class="cursor-pointer">Add More Certifications</h2>
+                        </div>
+
+                    </section>
+
+                    <!-- Professional Summary step -->
+                    <section id="step7" class="hidden mt-[30px] w-[100%] relative mb-[200px]">
+                            <div class="inputItem w-[100%] flex flex-col grid-rows-3 gap-6  ">
+                                <div class="text-1xl font-bold">
+                                    <label for="">Write 2-4 short, energetic sentences about how great you are. Mention the role and what you did. What were the big achievements? Describe your motivation and list your skills.</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] row-span-3 bg-[#E6E9F1]">
+                                    <textarea name="" id="" cols="4"  placeholder="" class="text-xl pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[200px] bg-[#E6E9F1]"></textarea>
+                                </div>
+                            </div>
+                    </section>
+
+                    <!-- Choose CV Template step -->
+                    <section id="step8" class="hidden mt-[30px] w-[100%] relative mb-16">
+                        <div class="grid grid-cols-2">
+                                <div class="col-span-1 flex flex-col items-center justify-center">
+                                    <img class="w-[50%]" src="./assets/images/template/image.png" alt="">
+                                    <div class="mt-5 grid grid-cols-3 gap-[10px]">
+                                        <button type="button" class="bg-[#1A91F0] text-white border rounded-[8px] p-[15px] px-[30px] col-span-2 text-2xl font-semibold">Choose Template</button>
+                                        <button type="button" class="bg-white border border-[#1A91F0] text-[#1A91F0] rounded-[8px] col-span-1"><i class="text-2xl fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 flex flex-col items-center justify-center">
+                                    <img class="w-[50%]" src="./assets/images/template/image.png" alt="">
+                                    <div class="mt-5 grid grid-cols-3 gap-[10px]">
+                                        <button type="button" class="bg-[#1A91F0] text-white border rounded-[8px] p-[15px] px-[30px] col-span-2 text-2xl font-semibold">Choose Template</button>
+                                        <button type="button" class="bg-white border border-[#1A91F0] text-[#1A91F0] rounded-[8px] col-span-1"><i class="text-2xl fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                        </div>
+                    </section>
+
+                    <!-- The bUtton for the Next & prev step -->
+                    <div class="bg-white   flex justify-end w-[100%] justify-self-end  left-[0px] h-[100px]  gap-6 ">
+                        <button dataStep="0" id="btnPrev" onclick="NextStep(currentStep , currentStep++)" type="button" class="bg-[#1A91F0]  px-[40px]  h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
+                            Previous
+                        </button>
+                        <button dataStep="0" id="btnNext" onclick="NextStep(currentStep , currentStep++)" type="button" class="bg-[#1A91F0] px-[40px]  h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
+                            next
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <!------------------------------- Javascript Scripts ----------------------------------->
+    <script src="https://kit.fontawesome.com/352cf65264.js" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
