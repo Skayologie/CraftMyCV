@@ -1,21 +1,15 @@
 
-
+// get all card that have the 'toggleCard' classe names 
 const allcardsToggle = document.getElementsByClassName("toggleCard")
-const allDivs = document.getElementsByClassName("cardSection")
 
-
+// loop for all cardsToggle with the event click
 for (const element of allcardsToggle) {
-    
-    element.addEventListener("click", (e)=>{
-
+    // When The User Clicked On Any Card That have className Toggle Card The card will open and close
+    element.addEventListener("click", ()=>{
         let id = element.id
-        element.classList.toggle("border-b-0")
         let section = document.getElementById("card"+id)
+        element.classList.toggle("border-b-0")
         section.classList.toggle("hidden")
-        console.log(id)
-
-
-        
     })
 }
 
