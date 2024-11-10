@@ -24,7 +24,7 @@
             </div>
         </header>
         <!-- Main For The HomePage Hero Banner -->
-        <main id="heroPage" class="z-20 bg-white mx-[100px] absolute flex h-[80vh] mt-[100px] max-h-[600px] ">
+        <main id="heroPage" class=" z-20 bg-white mx-[100px] absolute flex h-[80vh] mt-[100px] max-h-[600px] ">
             <div class=" h-[100%] bg-blue- w-[80%] flex flex-col justify-center gap-4">
                 <div class="text-xl font-bold">
                     <p>33,201 resumes created today</p>
@@ -111,12 +111,12 @@
                     </section>
 
                     <!-- Professional Experience step -->
-                    <section id="step2" class="hidden   w-[100%] relative mb-[50px]">
-                        <div class="title justify-between h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                    <section id="step2" class="hidden w-[100%] relative mb-[50px]">
+                        <div id="Experience1" class="toggleCard title justify-between mt-6 h-[60px] flex items-center border rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>web developer</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                        <div id="cardExperience1" class="cardSection hidden p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
                                 <div class="text-2xl font-bold">
                                     <label for="">Job Title</label>
@@ -179,24 +179,86 @@
                         
 
                         <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
+                        <div id="Experience2" class="toggleCard title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
                             <h2>web developer</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
+                        <div id="cardExperience2" class="cardSection hidden p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Job Title</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Web Developer" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Employer</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Sogé" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">City</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Casablanca" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%]  flex-col gap-3  grid grid-cols-2">
+                                <div class="col-span-1 flex flex-col gap-3">
+                                    <div class="text-2xl font-bold">
+                                        <label for="">Start Date</label>
+                                    </div>
+                                    <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                        <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                    </div>
+                                </div>
+                                <div class="col-span-1 flex flex-col gap-3">
+                                    <div class="text-2xl font-bold">
+                                        <label for="">End Date</label>
+                                    </div>
+                                    <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                        <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3 row-span-2 col-span-2">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Job Description</label>
+                                </div>
+                                <div class="w-[100%] h-[100%]">
+                                    <textarea  class="pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" placeholder="Lorem ipsum dolor sit amet consectetur. Ac malesuada consectetur suspendisse neque lectus tellus mattis risus. Ut nisi malesuada mi scelerisque. Ut ac non senectus amet nunc. Lorem at arcu egestas tempor." name="" id=""></textarea>
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Skills used (Optional)</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Html , Css , Js , Php" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+
+
                         <!-- Add More Fields -->
-                        <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
+                        <div id="moreExp" class="dynamicForm cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
                             <span class="material-symbols-outlined">add</span><h2></span>Add More Experience</h2>
                         </div>
 
                     </section>
 
                     <!-- Education -->
-                    <section id="step3" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
-                        <div class="title justify-between h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                    <section id="step3" class="hidden w-[100%] relative mb-[50px]">
+                        <div id="Education1" class="toggleCard title justify-between mt-6 h-[60px] flex items-center  border rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>Youcode</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                        <div id="cardEducation1" class="hidden p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
                                 <div class="text-2xl font-bold">
                                     <label for="">School</label>
@@ -250,10 +312,64 @@
                         
 
                         <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
-                            <h2>Bac Svt</h2>
+                        <div id="Education2" class="toggleCard title justify-between mt-6 h-[60px] flex items-center  border rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <h2>Youcode</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
+                        <div id="cardEducation2" class="hidden p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">School</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Youcode" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Degree</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Full stack Developer" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">City</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Youssoufia" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="col-span-1 flex flex-col gap-3">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Start Date</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3 row-span-2 col-span-2">
+                                <div class="text-2xl font-bold">
+                                    <label for="">School Description</label>
+                                </div>
+                                <div class="w-[100%] h-[100%]">
+                                    <textarea  class="pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" placeholder="Graduate of YouCode, a prestigious school of programming, where I underwent intensive training and hands-on learning in web development for two years. The comprehensive curriculum equipped me with a solid foundation in programming languages, frameworks, and methodologies essential for a successful career in the field. " name="" id=""></textarea>
+                                </div>
+                            </div>
+                            <div class="col-span-1 flex flex-col gap-3">
+                                <div class="text-2xl font-bold">
+                                    <label for="">End Date</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="date" name="" id="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+
                         <!-- Add More Fields -->
                         <div class="cursor-pointer title  h-[50px] flex items-center mt-[10px]  text-[#1A91F0] pl-[20px] text-2xl font-semibold gap-4">
                             <span class="material-symbols-outlined">add</span><h2></span>Add More Education Informations</h2>
@@ -263,31 +379,12 @@
 
                     <!-- Skills step -->
                     <section id="step4" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
-                        
-                        
-
                         <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
-                            <h2>Html</h2>
-                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
-                        </div>
-                        <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
-                            <h2>Php</h2>
-                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
-                        </div>
-                        <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
-                            <h2>Css</h2>
-                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
-                        </div>
-
-
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                        <div id="Skills1" class="toggleCard title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>Javascript</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-2 gap-10">
+                        <div id="cardSkills1" class="cardSection p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-2 gap-10">
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
                                 <div class="text-2xl font-bold">
                                     <label for="">Skill</label>
@@ -325,28 +422,12 @@
 
                     <!-- Languages step -->
                     <section id="step5" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
-                        
-                        
-
                         <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
-                            <h2>Arabic</h2>
-                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
-                        </div>
-                        <!-- Fields -->
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border   rounded-[8px]  pl-[20px] text-2xl font-semibold">
-                            <h2>English</h2>
-                            <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
-                        </div>
-                        <!-- Fields -->
-                       
-
-
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                        <div id="Languages2" class="toggleCard title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>French</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-2 gap-10">
+                        <div id="cardLanguages2" class="cardSection p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-2 gap-10">
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
                                 <div class="text-2xl font-bold">
                                     <label for="">Language</label>
@@ -395,11 +476,11 @@
 
 
 
-                        <div class="title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                        <div id="Certifications1" class="toggleCard title justify-between mt-6 h-[60px] flex items-center  border border-b-0 rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                             <h2>Css</h2>
                             <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 gap-10">
+                        <div id="cardCertifications1" class="cardSection p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 gap-10">
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
                                 <div class="text-2xl font-bold">
                                     <label for="">Certification Name</label>
@@ -478,8 +559,8 @@
                     </section>
 
                     <!-- The bUtton for the Next & prev step -->
-                    <div class="bg-white   flex justify-end w-[100%] justify-self-end  left-[0px] h-[100px]  gap-6 ">
-                        <button dataStep="0" id="btnPrev" type="button" class="bg-[#1A91F0]  px-[40px] h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
+                    <div class="bg-white flex justify-end w-[100%] justify-self-end  left-[0px] h-[100px]  gap-6 ">
+                        <button dataStep="1" id="btnPrev" type="button" class="bg-[#1A91F0]  px-[40px] h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
                             Previous
                         </button>
                         <button dataStep="1" id="btnNext" type="button" class="bg-[#1A91F0] px-[40px]  h-[50%] cursor-pointer text-white border rounded-[5px] flex items-center text-2xl ">
@@ -493,5 +574,6 @@
     <!------------------------------- Javascript Scripts ----------------------------------->
     <script src="https://kit.fontawesome.com/352cf65264.js" crossorigin="anonymous"></script>
     <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/toogleCard.js"></script>
 </body>
 </html>

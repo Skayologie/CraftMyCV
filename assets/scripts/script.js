@@ -34,12 +34,34 @@ const DisplayNoneBlock = (option,optionCurrent)=>{
         progressBar.style.width = step * ProgressBarPers +"%";
 }
 
+// Function That check the button aligability
+
+const checkPrevButton = () => {
+    if (step === "2") {
+        buttonPrev.style.display ="none"
+    }else{
+        buttonPrev.style.display ="block"
+    }
+    console.log(step)
+}
+
+// Checking The Next And The Prev Button 
+const iligibilityButton = (bound , target) =>{
+    if (step == bound) {
+        target.classList.add("cursor-not-allowed")
+    }else{
+        target.classList.remove("cursor-not-allowed")
+    }
+}
 
 
 
 // event click when the user click on the call action button
 startCreate.addEventListener("click",()=>{
-    titleProg.innerHTML = stepsArr[step];
+
+    titleProg.innerHTML = stepsArr[step-1];
+    // Check The Previous Button 
+    // Initialize The Title Progress To Right Title With The Step Index
     // animation for the heropage to go up 
     HeroPage.classList.add("totop")
     // this timeout for add hidden class after the section go up with the animation after 300 ms
@@ -53,39 +75,96 @@ startCreate.addEventListener("click",()=>{
     setTimeout(()=>{
         TheMainForm.classList.remove("hidden")
     },300)
+
+    // checking for the prev Button
+    if (step == 1) {
+        buttonPrev.classList.add("cursor-not-allowed")
+        return
+    }else{
+        buttonPrev.classList.remove("cursor-not-allowed")
+    }
 });
 
 
 // Event For The Next Button
 buttonNext.addEventListener("click", ()=>{
+    // Check The next Button 
+    if (step == 8) {
+        buttonNext.classList.add("cursor-not-allowed")
+        return
+    }else{
+        buttonNext.classList.remove("cursor-not-allowed")
+    }
+
     // Change The Title Progress To Right Title With The Step Index
     titleProg.innerHTML = stepsArr[step];
-
+    
     // Create The Id Of The Current Step 
     let currentStep = "step"+step;
-
+    
     // Incrimment The Step
     step++;
-
+    console.log("this is the atrr", step)
+    
     // Create The Id Of The Next Step 
     let NextStep = "step"+step;
     DisplayNoneBlock(NextStep,currentStep)
-
+    
     // Made A progress Bar Transition
     progressBar.style.transition = "1s ease-in-out ";
+
+    // Check The Previous Button 
+    if (step == 1) {
+        buttonPrev.classList.add("cursor-not-allowed")
+    }else{
+        buttonPrev.classList.remove("cursor-not-allowed")
+    }
+
+    // Check The next Button After
+    if (step == 8) {
+        buttonNext.classList.add("cursor-not-allowed")
+    }else{
+        buttonNext.classList.remove("cursor-not-allowed")
+    }
 });
 
 
 // Event For The Prev Button
 buttonPrev.addEventListener("click", ()=>{
+    // Check The Previous Button 
+    if (step == 1) {
+        buttonPrev.classList.add("cursor-not-allowed")
+        return
+    }else{
+        buttonPrev.classList.remove("cursor-not-allowed")
+    }
+    // Check the Prev Button Function
+    checkPrevButton()
+
+    // Check The Previous Button 
     titleProg.innerHTML = stepsArr[step - 2];
+    
+    // desincremment The Step To back To the previous section
     let currentStep = "step"+step
 
-    // desincremment The Step To back To the previous section
     step--
     
     let prevStep = "step"+step
     DisplayNoneBlock(prevStep,currentStep)
+
+    // Check The Previous Button After The 
+    if (step == 1) {
+        buttonPrev.classList.add("cursor-not-allowed")
+    }else{
+        buttonPrev.classList.remove("cursor-not-allowed")
+    }
+
+    // Check The next Button After
+    if (step == 8) {
+        buttonNext.classList.add("cursor-not-allowed")
+    }else{
+        buttonNext.classList.remove("cursor-not-allowed")
+    }
 
 })
 
