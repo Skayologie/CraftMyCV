@@ -24,6 +24,12 @@ let ProgressBarPers = 100 / stepsArr.length ;
 
 /************************************************************************************************/
 //******************************** Define The Functions *****************************************/
+// Event To Check the refresh Of The Page Before It Refreshed
+// this function will disaled in the dev period
+// window.onbeforeunload = function() {
+//     return 0;
+// }
+
 // Function To Go Or Back To The Section
 const DisplayNoneBlock = (option,optionCurrent)=>{
         // Displaying The Next Step And Hide The Current Step With Animations
@@ -42,6 +48,7 @@ const checkPrevButton = () => {
         buttonPrev.style.display ="none"
     }
 }
+
 // Function That check the button aligability
 const checkNextButton = () => {
     if (step == "8") {
@@ -50,6 +57,7 @@ const checkNextButton = () => {
         buttonNext.style.display ="block"
     }
 }
+
 // event click when the user click on the call action button
 startCreate.addEventListener("click",()=>{
 
@@ -78,7 +86,6 @@ startCreate.addEventListener("click",()=>{
         buttonPrev.classList.remove("cursor-not-allowed")
     }
 });
-
 
 // Event For The Next Button
 buttonNext.addEventListener("click", ()=>{
@@ -164,7 +171,23 @@ buttonPrev.addEventListener("click", ()=>{
 })
 
 
-
-
+// Hovering Template
+let template1 = document.getElementById("template1")
+let template2 = document.getElementById("template2")
+let chooseHove1 = document.getElementById("chooseHove1")
+let chooseHover2 = document.getElementById("chooseHover2")
+let TemplateChoosed = 0 ;
+template2.onclick = () =>{
+    chooseHove1.classList.add("hidden")
+    chooseHover2.classList.remove("hidden")
+    TemplateChoosed = 2 ;
+    console.log(TemplateChoosed)
+}
+template1.onclick = () =>{
+    chooseHove1.classList.remove("hidden")
+    chooseHover2.classList.add("hidden")
+    TemplateChoosed = 1 ;
+    console.log(TemplateChoosed)
+}
 
 

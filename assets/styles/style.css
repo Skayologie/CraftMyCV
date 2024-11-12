@@ -71,4 +71,10 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #1681d8;
   }
-
+/* 
+#template1:hover + #chooseHove1{
+    display: flex !important;
+}
+#templete2:hover + #chooseHover2{
+    display: flex !important;
+} */

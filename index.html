@@ -9,6 +9,8 @@
     <!-- Poppins Fonts -->
     <link rel="stylesheet" href="./assets/fonts/poppins.css">       
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Include stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
@@ -18,13 +20,13 @@
     <!------------------- The Div That Contains All Content Website ------------------------>
     <div class="container ">
         <!-- Header For Website Logo -->
-        <header class="w-[100%]  flex justify-center h-[100px] items-center fixed ">
+        <header class="w-[100%]  flex justify-center h-[100px] items-center bg-white ">
             <div class="logo">
                 <img class="w-[150px]" src="assets/images/logo.svg" alt="">
             </div>
         </header>
         <!-- Main For The HomePage Hero Banner -->
-        <main id="heroPage" class=" z-20 bg-white mx-[100px] absolute flex h-[80vh] mt-[100px] max-h-[600px] ">
+        <main id="heroPage" class=" z-20 bg-white mx-[100px] absolute flex h-[80vh]  max-h-[600px] ">
             <div class=" h-[100%] bg-blue- w-[80%] flex flex-col justify-center gap-4">
                 <div class="text-xl font-bold">
                     <p>33,201 resumes created today</p>
@@ -46,7 +48,7 @@
             </div>
         </main>
         <!-- Main For Showing The Forms  -->
-        <main id="TheMainForm" class="scale-50 z-0 mx-[100px] mt-[100px]  gap-[25px] flex flex-col h-[80vh] max-h-[600px]">
+        <main id="TheMainForm" class="scale-50 z-0 mx-[100px]  gap-[25px] flex flex-col h-[80vh] max-h-[600px]">
             <!-- The Title & Progress Bar -->
             <div class="bg-white z-10 sticky top-0 pt-8 w-[100%]">
                 <!-- The Title -->
@@ -71,7 +73,7 @@
                                     <label for="">Full Name</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="JawadBoulmal" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                    <input  placeholder="JawadBoulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="fullName">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -79,7 +81,7 @@
                                     <label for="">Email Address</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input  placeholder="jawadboulmal@gmail.com" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="email" name="" id="">
+                                    <input  placeholder="jawadboulmal@gmail.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="email" name="" id="email">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -87,7 +89,7 @@
                                     <label for="">Phone Number</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="0632773027" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="number" name="" id="">
+                                    <input placeholder="0632773027" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="number" name="" id="numberPhone">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -95,7 +97,7 @@
                                     <label for="">LinkedIn Profile (Optional)</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="@jawad-boulmal" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="">
+                                    <input placeholder="@jawad-boulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="linkedin">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3 ">
@@ -103,7 +105,7 @@
                                     <label for="">Portfolio/Website (Optional)</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="https://jawadboulmal.com" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="url" name="" id="">
+                                    <input placeholder="https://www.jawadboulmal.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="url" name="" id="website">
                                 </div>
                             </div>
                         </div>
@@ -123,7 +125,7 @@
                     </section>
 
                     <!-- Education -->
-                    <section id="step3" class="hidden w-[100%] relative mb-[50px]">
+                    <section id="step3" class=" hidden w-[100%] relative mb-[50px]">
                         <div id="eduContainer">
                         
                         </div>
@@ -137,7 +139,7 @@
                     </section>
 
                     <!-- Skills step -->
-                    <section id="step4" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
+                    <section id="step4" class="hidden  w-[100%] relative mb-[50px]">
                         <!-- Fields -->
                         <div id="skillsContainer">
                             
@@ -151,7 +153,7 @@
                     </section>
 
                     <!-- Languages step -->
-                    <section id="step5" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
+                    <section id="step5" class="hidden   w-[100%] relative mb-[50px]">
                         <!-- Fields -->
                         <div id="langContainer">
 
@@ -165,10 +167,10 @@
                     </section>
 
                     <!-- Certifications step -->
-                    <section id="step6" class="hidden mt-[30px]  w-[100%] relative mb-[50px]">
+                    <section id="step6" class="hidden   w-[100%] relative mb-[50px]">
                         <!-- Fields -->
                         <div id="certifContainer">
-
+                            
                         </div>
 
                         <!-- Add More Fields -->
@@ -179,33 +181,60 @@
                     </section>
 
                     <!-- Professional Summary step -->
-                    <section id="step7" class="hidden mt-[30px] w-[100%] relative mb-[50px]">
+                    <section id="step7" class="hidden w-[100%] relative mb-[50px]">
                             <div class="inputItem w-[100%] flex flex-col grid-rows-3 gap-6  ">
                                 <div class="text-1xl font-bold">
                                     <label for="">Write 2-4 short, energetic sentences about how great you are. Mention the role and what you did. What were the big achievements? Describe your motivation and list your skills.</label>
                                 </div>
                                 <div class="w-[100%] h-[200px] row-span-3 bg-[#E6E9F1]">
-                                    <textarea name="" id="" cols="4"  placeholder="" class="text-xl pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[200px] bg-[#E6E9F1]"></textarea>
+                                    <textarea name="" id="summary10000" cols="4"  placeholder="" class="text-xl pt-4 font-semibold text-1xl pl-[10px] w-[100%] h-[200px] bg-[#E6E9F1]"></textarea>
+                                </div>
+                                <div style="height:45px;width: 25%;" class="grid col-span-1" >
+                                    <input onclick="addProfileDetails(null,'summary')" style="border-radius: 6px;background-color:rgb(26 145 240);color:white;" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1] " type="button" value="save" id="ADD${id}">
+                                    <input onclick="DeleteProfileDetails(10000,'summary')" style="border-radius: 6px;background-color:red;color:white;" class="hidden font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
                                 </div>
                             </div>
                     </section>
 
                     <!-- Choose CV Template step -->
-                    <section id="step8" class="hidden mt-[30px] w-[100%] relative mb-16">
+                    <section id="step8" class="hidden mt-[30px] w-[100%] relative mb-16 absolute top-0 ">
                         <div class="grid grid-cols-2">
-                                <div class="col-span-1 flex flex-col items-center justify-center">
-                                    <img class="w-[50%]" src="./assets/images/template/image.png" alt="">
-                                    <div class="mt-5 grid grid-cols-3 gap-[10px]">
+                                <div class="col-span-1 flex flex-col items-center justify-center ">
+                                    <img class="w-[50%] border rounded-md Template" id="template1" src="./assets/images/template/image.png" alt="">
+                                    <!-- <div class="mt-5 grid grid-cols-3 gap-[10px]">
                                         <button type="button" class="bg-[#1A91F0] text-white border rounded-[8px] p-[15px] px-[30px] col-span-2 text-2xl font-semibold">Choose Template</button>
                                         <button type="button" class="bg-white border border-[#1A91F0] text-[#1A91F0] rounded-[8px] col-span-1"><i class="text-2xl fa-solid fa-eye"></i></button>
-                                    </div>
+                                    </div> -->
+                                    <div class="hidden gap-6 font-bold border rounded-md absolute top-0 text-2xl text-white h-full w-[25%] flex flex-col justify-center items-center" style="background-color: #1f293753;" id="chooseHove1">
+                                        <h2>Template 1 Choosed</h2>  
+                                         <div class="flex gap-4">
+                                            <button type="button" class="bg-[#3b82f6] p-[25px] flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
+                                                <i class=" fa-solid fa-download"></i>
+                                            </button>
+                                            <button type="button" class="bg-[#3b82f6] p-[25px] flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
+                                               <i class="fa-solid fa-eye"></i>
+                                           </button>
+                                         </div>
+                                 </div>
                                 </div>
-                                <div class="col-span-1 flex flex-col items-center justify-center">
-                                    <img class="w-[50%]" src="./assets/images/template/image.png" alt="">
-                                    <div class="mt-5 grid grid-cols-3 gap-[10px]">
+                                <div  class=" col-span-1 flex flex-col items-center justify-center relative ">
+                                    <img class="border rounded-md w-[50%] Template" id="template2" src="./assets/images/template/image.png" alt="">
+                                    <!-- <div class="mt-5 grid grid-cols-3 gap-[10px]">
                                         <button type="button" class="bg-[#1A91F0] text-white border rounded-[8px] p-[15px] px-[30px] col-span-2 text-2xl font-semibold">Choose Template</button>
                                         <button type="button" class="bg-white border border-[#1A91F0] text-[#1A91F0] rounded-[8px] col-span-1"><i class="text-2xl fa-solid fa-eye"></i></button>
+                                    </div> -->
+                                    <div class="hidden gap-6 font-bold border rounded-md absolute top-0 text-2xl text-white h-full w-[50%] flex flex-col justify-center items-center" style="background-color: #1f293753;" id="chooseHover2">
+                                           <h2>Template 2 Choosed</h2>  
+                                            <div class="flex gap-4">
+                                                <button type="button" class="bg-[#3b82f6] p-[25px] flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
+                                                    <i class=" fa-solid fa-download"></i>
+                                                </button>
+                                                <button type="button" class="bg-[#3b82f6] p-[25px] flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                            </div>
                                     </div>
+
                                 </div>
                         </div>
                     </section>
@@ -224,10 +253,8 @@
         </main>
     </div>
     <!------------------------------- Javascript Scripts ----------------------------------->
-    <script src="https://kit.fontawesome.com/352cf65264.js" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/icons.js" crossorigin="anonymous"></script>
     <script src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/dynamicForm.js"></script>
-    <script src="./assets/scripts/toogleCard.js"></script>
-    <script src="./assets/scripts/inputChangeName.js"></script>
 </body>
 </html>
