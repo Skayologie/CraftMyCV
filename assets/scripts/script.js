@@ -171,7 +171,7 @@ buttonPrev.addEventListener("click", ()=>{
 })
 
 
-// Hovering Template
+// Clicking En Template
 let template1 = document.getElementById("template1")
 let template2 = document.getElementById("template2")
 let chooseHove1 = document.getElementById("chooseHove1")

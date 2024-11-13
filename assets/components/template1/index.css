@@ -1,0 +1,1148 @@
+.example-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.example-example {
+  width: 595px;
+  height: 842px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.example-cv-templatewithout-photo {
+  top: 0px;
+  left: 0px;
+  width: 595px;
+  height: 842px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.example-sidebar {
+  top: 0px;
+  left: 0px;
+  width: 210px;
+  height: 842px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 210px;
+  height: 842px;
+  position: absolute;
+}
+.example-content1 {
+  gap: 20px;
+  top: 31px;
+  left: 12px;
+  width: 186px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame1 {
+  width: 186px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-text10 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text11 {
+  color: rgba(195, 193, 193, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame41 {
+  gap: 8px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame2 {
+  gap: 10px;
+  display: flex;
+  padding: 4px 8px;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: rgba(229, 229, 229, 1);
+}
+.example-text12 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame3 {
+  gap: 10px;
+  display: flex;
+  padding: 4px 8px;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: rgba(229, 229, 229, 1);
+}
+.example-text13 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame42 {
+  gap: 10px;
+  display: flex;
+  padding: 4px 8px;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: rgba(229, 229, 229, 1);
+}
+.example-text14 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame5 {
+  gap: 10px;
+  display: flex;
+  padding: 4px 8px;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: rgba(229, 229, 229, 1);
+}
+.example-text15 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame61 {
+  gap: 8px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text16 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text17 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame71 {
+  gap: 8px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text25 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame91 {
+  gap: 4px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame81 {
+  gap: 8px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.example-text26 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text27 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: right;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text28 {
+  color: rgba(195, 193, 193, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame82 {
+  gap: 8px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text29 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text30 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame92 {
+  gap: 8px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text36 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame121 {
+  gap: 16px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-frame10 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+.example-simpleiconslinkedin {
+  width: 14px;
+  height: 14px;
+}
+.example-text37 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: underline;
+}
+.example-frame11 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+.example-simpleiconsgithub {
+  width: 14px;
+  height: 14px;
+}
+.example-text38 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: underline;
+}
+.example-frame131 {
+  gap: 16px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-frame141 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+.example-simpleiconsdribbble {
+  width: 14px;
+  height: 14px;
+}
+.example-text39 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: underline;
+}
+.example-frame132 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+.example-simpleiconsinstagram {
+  width: 14px;
+  height: 14px;
+}
+.example-text40 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: underline;
+}
+.example-frame142 {
+  gap: 16px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-frame122 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+.example-featherexternallink {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-group {
+  top: 1.750000238418579px;
+  left: 1.750000238418579px;
+  width: 10.5px;
+  height: 10.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.example-vector1 {
+  top: 1.749999761581421px;
+  left: 0px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+.example-vector2 {
+  top: 0px;
+  left: 7px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+.example-vector3 {
+  top: 0px;
+  left: 4.083330154418945px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+}
+.example-text41 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: underline;
+}
+.example-main {
+  top: 0px;
+  left: 210px;
+  width: 385px;
+  height: 842px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-rectangle2 {
+  top: 0px;
+  left: 0px;
+  width: 390px;
+  height: 842px;
+  position: absolute;
+}
+.example-content2 {
+  gap: 20px;
+  top: 32px;
+  left: 32px;
+  width: 321px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-frame62 {
+  gap: 12px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame151 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text42 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-rectangle31 {
+  width: 32px;
+  height: 2px;
+  border-radius: 4px;
+}
+.example-text43 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame72 {
+  gap: 12px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame152 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text44 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-rectangle32 {
+  width: 32px;
+  height: 2px;
+  border-radius: 4px;
+}
+.example-frame171 {
+  gap: 24px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-text45 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame161 {
+  gap: 4px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+.example-frame181 {
+  gap: 10px;
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+}
+.example-ellipse11 {
+  width: 8px;
+  height: 8px;
+}
+.example-frame191 {
+  gap: 4px;
+  width: 223px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-text46 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 10px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text47 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text48 {
+  color: rgba(134, 134, 134, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame83 {
+  gap: 12px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame153 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text49 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-rectangle33 {
+  width: 32px;
+  height: 2px;
+  border-radius: 4px;
+}
+.example-frame172 {
+  gap: 24px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-companylogo1 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-image1 {
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+.example-frame162 {
+  gap: 4px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+.example-frame182 {
+  gap: 10px;
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+}
+.example-ellipse12 {
+  width: 8px;
+  height: 8px;
+}
+.example-frame192 {
+  gap: 4px;
+  width: 245px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-text50 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame201 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+}
+.example-text51 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text52 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text53 {
+  color: rgba(134, 134, 134, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame183 {
+  gap: 24px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-companylogo2 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-image2 {
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+.example-frame163 {
+  gap: 4px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+.example-frame184 {
+  gap: 10px;
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+}
+.example-ellipse13 {
+  width: 8px;
+  height: 8px;
+}
+.example-frame193 {
+  gap: 4px;
+  width: 245px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-text54 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame202 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+}
+.example-text55 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text56 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text57 {
+  color: rgba(134, 134, 134, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame194 {
+  gap: 24px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-companylogo3 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-image3 {
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+.example-frame164 {
+  gap: 4px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+.example-frame185 {
+  gap: 10px;
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+}
+.example-ellipse14 {
+  width: 8px;
+  height: 8px;
+}
+.example-frame195 {
+  gap: 4px;
+  width: 245px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-text58 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame203 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+}
+.example-text59 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text60 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text61 {
+  color: rgba(134, 134, 134, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame93 {
+  gap: 12px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-frame154 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.example-text62 {
+  color: rgba(35, 58, 95, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-rectangle34 {
+  width: 32px;
+  height: 2px;
+  border-radius: 4px;
+}
+.example-frame173 {
+  gap: 24px;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-companylogo4 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.example-image4 {
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+.example-frame165 {
+  gap: 4px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+.example-frame186 {
+  gap: 10px;
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+}
+.example-ellipse15 {
+  width: 8px;
+  height: 8px;
+}
+.example-frame196 {
+  gap: 4px;
+  width: 245px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.example-text63 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-frame204 {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+}
+.example-text64 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text65 {
+  color: rgba(42, 42, 42, 1);
+  height: auto;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.example-text66 {
+  color: rgba(134, 134, 134, 1);
+  height: auto;
+  font-size: 8px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

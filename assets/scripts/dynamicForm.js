@@ -4,7 +4,7 @@
 //get all the buttons for creating the new form 
 let allDynamicForm = document.querySelectorAll(".dynamicForm");
 let AllInputsField = document.querySelectorAll(".inputFeild");
-
+// let cardSection = document.querySelectorAll(".cardSection")
 // Array that store all informations from user
 let CVInformations = [
     profileDetails = {
@@ -12,7 +12,8 @@ let CVInformations = [
         email: "" ,
         mobileNumber: 0 ,
         linkdin: "" ,
-        portfolio: ""
+        portfolio: "",
+        image: ""
     },
     experience = [],
     Education = [],
@@ -24,6 +25,8 @@ let CVInformations = [
 
 // The Id Of The Input
 let id = 1; 
+var imgSrc = document.getElementById("image").value;
+console.log(imgSrc)
 
 // Function That Add Details to the CVInformations Array 
 function addProfileDetails(ids,step){                                                    
@@ -100,8 +103,12 @@ function addProfileDetails(ids,step){
             let summary = document.getElementById('summary10000').value
             CVInformations[6] = summary
             console.log(summary)
+
+            const data = readFileSync('data.json');
+            const jsonData = JSON.parse(data);
+
+            console.log(jsonData)
         }
-        console.log(CVInformations)
         deleteButton.classList.remove("hidden")
         addButton.classList.add('hidden')
         ids++
@@ -119,20 +126,21 @@ function ChangeTheCardName(e , title ){
     document.querySelector(title).innerHTML = e.value
 }
 
-// Add 
 for (const element of allDynamicForm) {  
+
     // when the user clicked for creating a new form 
     element.addEventListener("click", () => {
         // those conditions are check the id of the button that user clicked on is the button for the experience form or certification or other 
         // for experience form
         if (element.id === "exper"){
+            
             // Append new content to the container
             document.getElementById("experContainer").innerHTML += `
-                <div onclick="justToggle('Experience${id}','cardExperience${id}')" id="Experience${id}" class="toggleCard border-b-0 title justify-between mt-6 h-[60px] flex items-center border b rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
+                            <div onclick="justToggle('Experience${id}','cardExperience${id}')" id="Experience${id}" class="toggleCard  title justify-between mt-6 h-[60px] flex items-center border b rounded-[8px] rounded-br-none rounded-bl-none pl-[20px] text-2xl font-semibold">
                                 <h2>Web Developer</h2>
                                 <i class="cursor-pointer pr-[30px] fa-solid fa-chevron-down"></i>
                             </div>
-                            <div id="cardExperience${id}" class="cardSection  p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
+                            <div id="cardExperience${id}" class="hidden cardSection  p-[20px] border rounded-[8px] rounded-tr-none border-t-0 rounded-tl-none inputsContainer grid grid-cols-3 grid-rows-3 gap-10">
                                 <div class="inputItem w-[100%] flex flex-col gap-3">
                                     <div class="text-2xl font-bold">
                                         <label for="">Job Title</label>
@@ -197,8 +205,7 @@ for (const element of allDynamicForm) {
                                 </div>
                             </div>
             `;
-            
-            id++; // Increment ID for the next element
+                id++; // Increment ID for the next element
         }
         // for education form
         else if (element.id === "edu"){
@@ -407,3 +414,5 @@ for (const element of allDynamicForm) {
         }
     });
 }
+
+// 
