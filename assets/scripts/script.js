@@ -5,7 +5,6 @@ let startCreate = document.getElementById("startCreate");
 let HeroPage = document.getElementById("heroPage");
 let TheMainForm = document.getElementById("TheMainForm");
 let ValideSum = 0
-let ValideSum2 = 0
 
 // The next & previous buttons
 const buttonNext = document.getElementById("btnNext");
@@ -99,7 +98,7 @@ buttonNext.addEventListener("click", ()=>{
     const image = document.getElementById("image").value;
     Regex()
     console.log(ValideSum)
-    if (ValideSum === 5 || ValideSum2 === 4) {
+    if (ValideSum === 5) {
         // Change The Title Progress To Right Title With The Step Index
         titleProg.innerHTML = stepsArr[step];
         
@@ -225,4 +224,5 @@ function Regex(){
     RegexTemplate(numberPhone,phonePattern)
     RegexTemplate(positiInput,positionPattern)
     RegexTemplate(website,websitePattern)
+
 }

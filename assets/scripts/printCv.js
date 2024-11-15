@@ -1,18 +1,20 @@
 
-const style = '';
 const btn1 = document.getElementById('templateForOne');
 const btn2 = document.getElementById('templateForTwo');
 const buttonShow1 = document.getElementById("ShowtemplateForOne")
 const buttonShow2 = document.getElementById("ShowtemplateForTwo")
 const image = document.getElementById("image")
 const CIVI = document.getElementById('temp1');
+
 document.addEventListener("DOMContentLoaded", function(){
     btn1.addEventListener("click", ()=>{
+        let cvName = "CV.pdf"
+        
         // CIVI.classList.remove("hidden")
         const CV = {
             margin: 0, 
             image: { type: "jpeg", quality: 0.98 },
-            filename:'helloo.pdf',
+            filename: cvName,
             html2canvas: { scale: 4 }, 
             jsPDF:{ unit: "in", orientation: "portrait", format:"A4" }
         };

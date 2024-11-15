@@ -63,15 +63,7 @@ function addProfileDetails(ids,step){
                 jobDescription: document.getElementById('jobdesc'+ids).value,
                 skills: document.getElementById('skillsused'+ids).value,
             };
-            RegexTemplate(newExperience.title,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
-            RegexTemplate(newExperience.Employer,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
-            RegexTemplate(newExperience.city,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
-            RegexTemplate(newExperience.jobDescription,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
-            RegexTemplate(newExperience.skills,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
-            if(ValideSum2===5){
-
-                CVInformations[1].push(newExperience);
-            }
+            CVInformations[1].push(newExperience);
         }
         if(step === "edu"){
             let newEdu = {
