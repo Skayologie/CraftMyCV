@@ -4,7 +4,7 @@
 //get all the buttons for creating the new form 
 let allDynamicForm = document.querySelectorAll(".dynamicForm");
 let AllInputsField = document.querySelectorAll(".inputFeild");
-let validation = false
+
 // let cardSection = document.querySelectorAll(".cardSection")
 // Array that store all informations from user 
 CVInformations = [
@@ -52,6 +52,7 @@ function addProfileDetails(ids,step){
 // Add The Informations of the Experience Dynamic form To THe main array 
     if(!isMatched){
         if(step === "proExp") {
+            let ValideSum2 = 0
             let newExperience = {
                 id:ids,
                 title: document.getElementById('titleInputExper'+ids).value,
@@ -62,7 +63,15 @@ function addProfileDetails(ids,step){
                 jobDescription: document.getElementById('jobdesc'+ids).value,
                 skills: document.getElementById('skillsused'+ids).value,
             };
-            CVInformations[1].push(newExperience);
+            RegexTemplate(newExperience.title,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
+            RegexTemplate(newExperience.Employer,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
+            RegexTemplate(newExperience.city,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
+            RegexTemplate(newExperience.jobDescription,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
+            RegexTemplate(newExperience.skills,/^[a-zA-Z\s]{2,30}$/,ValideSum2)
+            if(ValideSum2===5){
+
+                CVInformations[1].push(newExperience);
+            }
         }
         if(step === "edu"){
             let newEdu = {
@@ -148,7 +157,7 @@ for (const element of allDynamicForm) {
                                         <label for="">Job Title</label>
                                     </div>
                                     <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                        <input  oninput="ChangeTheCardName(this , '#Experience${id} h2')" placeholder="Web Developer" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1] " type="text" name="" id="titleInputExper${id}">
+                                        <input onclick='RegexTemplate(document.getElementById("email"),/^[a-zA-Z\s]{2,30}$/)' oninput="ChangeTheCardName(this , '#Experience${id} h2')" placeholder="Web Developer" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1] " type="text" name="" id="titleInputExper${id}">
                                     </div>
                                 </div>
                                 <div class="inputItem w-[100%] flex flex-col gap-3">

@@ -76,8 +76,8 @@
                                     <label for="">Full Name</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input  placeholder="JawadBoulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="fullName">
-                                    <p id="fullNameERROR" class="text-red-700 hidden">Full Name Incorrect</p>
+                                    <input isRegular="false" placeholder="JawadBoulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="fullName">
+                                    <p id="fullNameError" class="text-red-700 hidden">Name Is invalid !!</p>
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -85,7 +85,7 @@
                                     <label for="">Position</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="Web FullStack Developer" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="position">
+                                    <input dataRegex="false"  placeholder="Web FullStack Developer" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="position">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -93,8 +93,8 @@
                                     <label for="">Email Address</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input  placeholder="jawadboulmal@gmail.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="email" name="" id="email">
-                                    <p id="emailERROR" class="text-red-700 hidden">Email Incorrect</p>
+                                    <input dataRegex="false"  placeholder="jawadboulmal@gmail.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="email" name="" id="email">
+                                    <p  id="emailERROR" class="text-red-700 hidden">Email Incorrect</p>
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -102,7 +102,7 @@
                                     <label for="">Phone Number</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="0632773027" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="number" name="" id="numberPhone">
+                                    <input  dataRegex="false" placeholder="0632773027" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="number" name="" id="numberPhone">
                                     <p id="phoneNumberERROR" class="text-red-700 hidden">Phone Number Incorrect</p>
                                 </div>
                             </div>
@@ -111,15 +111,15 @@
                                     <label for="">LinkedIn Profile (Optional)</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="@jawad-boulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="linkedin">
+                                    <input dataRegex="false" placeholder="@jawad-boulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="linkedin">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3 ">
                                 <div class="text-2xl font-bold">
-                                    <label for="">Portfolio/Website (Optional)</label>
+                                    <label dataRegex="false" for="">Portfolio/Website </label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input placeholder="https://www.jawadboulmal.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="url" name="" id="website">
+                                    <input dataRegex="false"  placeholder="https://www.jawadboulmal.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="url" name="" id="website">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3 ">
@@ -127,7 +127,7 @@
                                     <label for="">Image</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input multiple accept="image/*" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1] photo" type="file" name="" id="image">
+                                    <input dataRegex="false"  multiple accept="image/*" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1] photo" type="file" name="" id="image">
                                     <p id="imageERROR" class="text-red-700 hidden">Image Is Required</p>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@
                                         <button type="button" class="bg-white border border-[#1A91F0] text-[#1A91F0] rounded-[8px] col-span-1"><i class="text-2xl fa-solid fa-eye"></i></button>
                                     </div> -->
                                     <div class="hidden gap-6 font-bold border rounded-md absolute top-0 text-2xl text-white h-full w-[50%] flex flex-col justify-center items-center" style="background-color: #1f293753;" id="chooseHover2">
-                                           <h2>Template 2 Choosed</h2>  
+                                            <h2>Template 2 Choosed</h2>  
                                             <div class="flex gap-4">
                                                 <button id="templateForTwo"  type="button" class="bg-[#3b82f6] p-[25px] flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
                                                     <i class=" fa-solid fa-download"></i>
@@ -298,7 +298,7 @@
                             </div>
                                     
                         </div>
-                        <button type="button" id="templateForOne" class="bg-[#3b82f6] p-[25px] text-white flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
+                        <button  type="button" id="templateForOne" class="bg-[#3b82f6] p-[25px] text-white flex justify-center items-center w-[30px] h-[30px] rounded-[50px]">
                             <i class=" fa-solid fa-download"></i>
                         </button>
                     </section>
@@ -322,7 +322,7 @@
 
     <!------------------------------- Javascript Scripts ----------------------------------->
     <script src="./assets/scripts/icons.js" crossorigin="anonymous"></script>
-    <script  type="module"  src="./assets/scripts/script.js"></script>
+    <script type="module" defer src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/dynamicForm.js"></script>
     <script src="assets/scripts/printCv.js"></script>
     <script src="./assets/scripts/template1.js"></script>

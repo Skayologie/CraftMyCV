@@ -1,10 +1,12 @@
 /* Define The Global Variables */
-// import regExpression from './regEx'
+
 // Get The Call Action Button And heroPage Section & The Main Form wich contain all inputs
 let startCreate = document.getElementById("startCreate");
 let HeroPage = document.getElementById("heroPage");
 let TheMainForm = document.getElementById("TheMainForm");
-let validation = false
+let ValideSum = 0
+let ValideSum2 = 0
+
 // The next & previous buttons
 const buttonNext = document.getElementById("btnNext");
 const buttonPrev = document.getElementById("btnPrev");
@@ -30,54 +32,6 @@ let ProgressBarPers = 100 / stepsArr.length ;
 // window.onbeforeunload = function() {
 //     return 0;
 // }
-
-function regExpression(regType,inputVal,InputId) {
-    if (regType === "email") {
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        console.log(emailPattern.test(inputVal))
-        if (emailPattern.test(inputVal)) {
-            document.getElementById(InputId).style.display = "none"
-            return validation = true 
-        }else{
-            document.getElementById(InputId).style.display = "block"
-            return validation = false
-        }
-        
-    }
-    if (regType === "fullName") {
-        const fullNamePattern = /[a-zA-Z]{2,30}$/;
-        console.log(fullNamePattern.test(inputVal))
-        if (fullNamePattern.test(inputVal)) {
-            document.getElementById(InputId).style.display = "none"
-            return validation = true 
-        }else{
-            document.getElementById(InputId).style.display = "block"
-            return validation = false
-        }
-    }
-    if (regType === "phoneNumber") {
-        const phoneNumberPattern = /^\d{10}$/;
-        console.log(phoneNumberPattern.test(inputVal))
-        if (phoneNumberPattern.test(inputVal)) {
-            document.getElementById(InputId).style.display = "none"
-            return validation = true 
-        }else{
-            document.getElementById(InputId).style.display = "block"
-            return validation = false
-        }
-    }
-    if (regType === "image") {
-        if (inputVal != "") {
-            document.getElementById(InputId).style.display = "none"
-            return validation = true 
-        }else{
-            document.getElementById(InputId).style.display = "block"
-            return validation = false
-        }
-    }
-}  
-
-
 
 
 // Function To Go Or Back To The Section
@@ -143,12 +97,9 @@ buttonNext.addEventListener("click", ()=>{
     const fullName = document.getElementById("fullName").value;
     const phoneNumber = document.getElementById("numberPhone").value;
     const image = document.getElementById("image").value;
-
-    regExpression("email",email,"emailERROR")
-    regExpression("fullName",fullName,"fullNameERROR")
-    regExpression("phoneNumber",phoneNumber,"phoneNumberERROR")
-    regExpression("image",image,"imageERROR")
-    if (validation) {
+    Regex()
+    console.log(ValideSum)
+    if (ValideSum === 5 || ValideSum2 === 4) {
         // Change The Title Progress To Right Title With The Step Index
         titleProg.innerHTML = stepsArr[step];
         
@@ -180,8 +131,6 @@ buttonNext.addEventListener("click", ()=>{
         }
         checkPrevButton()
         checkNextButton()
-    }else{
-        console.log('there is a problem here')
     }
     
 });
@@ -234,12 +183,7 @@ let template2 = document.getElementById("template2")
 let chooseHove1 = document.getElementById("chooseHove1")
 let chooseHover2 = document.getElementById("chooseHover2")
 let TemplateChoosed = 0 ;
-template2.onclick = () =>{
-    chooseHove1.classList.add("hidden")
-    chooseHover2.classList.remove("hidden")
-    TemplateChoosed = 2 ;
-    console.log(TemplateChoosed)
-}
+
 template1.onclick = () =>{
     chooseHove1.classList.remove("hidden")
     chooseHover2.classList.add("hidden")
@@ -247,3 +191,38 @@ template1.onclick = () =>{
     console.log(TemplateChoosed)
 }
 
+
+// Regex En Generale Template
+function RegexTemplate(input,pattern){
+    if (!pattern.test(input.value)) {
+        input.style.border = "1px solid red";
+        
+    }else{
+        if (!input.dataRegex) {
+            ValideSum++
+        }
+        input.style.border = "none";
+        input.dataRegex = true
+    }
+}
+
+// dataRegex="false" Set This Attr in any input for valid it Made By @JawadBoulmal
+function Regex(){
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const fullNamePattern = /^[a-zA-Z\s]{2,30}$/;
+    const positionPattern = /^[a-zA-Z\s]{2,30}$/;
+    const phonePattern = /^\d{10}$/;
+    const websitePattern =  /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
+    const fullNameInput = document.getElementById("fullName")
+    const email = document.getElementById("email")
+    const numberPhone = document.getElementById("numberPhone")
+    const image = document.getElementById("image")
+    const website = document.getElementById("website")
+    const positiInput = document.getElementById("position")
+
+    RegexTemplate(fullNameInput,fullNamePattern)
+    RegexTemplate(email,emailPattern)
+    RegexTemplate(numberPhone,phonePattern)
+    RegexTemplate(positiInput,positionPattern)
+    RegexTemplate(website,websitePattern)
+}
