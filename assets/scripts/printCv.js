@@ -8,8 +8,14 @@ const image = document.getElementById("image")
 const CIVI = document.getElementById('temp1');
 document.addEventListener("DOMContentLoaded", function(){
     btn1.addEventListener("click", ()=>{
-        CIVI.classList.remove("hidden")
-        const CV = {margin: 0.5, image:{type: 'PNG'}, filename:'helloo.pdf', jsPDF:{format:'A5'} };
+        // CIVI.classList.remove("hidden")
+        const CV = {
+            margin: 0, 
+            image: { type: "jpeg", quality: 0.98 },
+            filename:'helloo.pdf',
+            html2canvas: { scale: 4 }, 
+            jsPDF:{ unit: "in", orientation: "portrait", format:"A4" }
+        };
         html2pdf().set(CV).from(CIVI).save();
     })
     buttonShow1.addEventListener("click", ()=>{

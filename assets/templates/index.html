@@ -13,23 +13,25 @@
 </head>
 <body style="font-family: poppins;">
     <div class="container text-[16px] bg-white w-[21cm] h-[29.7cm] p-[30px]">
-        <div class="firstSection grid grid-cols-3  gap-7">
-            <div class="ImageProfile col-span-1 max-h-[150px] max-w-[150px] overflow-hidden ">
-                <img class="object-cover w-[100%] h-[100%] border rounded-3xl" src="../images/template/image.png" alt="">
+        <div class="firstSection flex flex-wrap justify-center items-center gap-5">
+            <div class="ImageProfile col-span-1 max-h-[150px] max-w-[150px] overflow-hidden border rounded-3xl">
+                <img class="object-cover w-[100%] h-[100%] " src="../images/template/image.png" alt="">
             </div>
-            <div class="NameProfile col-span-1 flex justify-end flex-col">
-                <h1 class="text-6xl font-bold">Web Developer</h1>
-                <h3 class="text-4xl ">Jawad Boulmal</h3>
-            </div>
-            <div class="col-span-1 flex flex-col text-sm profileInfo justify-end text-[10px]">
-                <p>Casablanca</p>
-                <div class="Links flex gap-2">
-                    <a href="#">linkdein</a>
-                    <a href="#">Email</a>
-                    <a href="#">Github</a>
-                    <a href="#">Portfolio</a>
+            <div>
+                <div class="NameProfile col-span-1 flex justify-end flex-col">
+                    <h1 class="text-6xl font-bold">Web Developer</h1>
+                    <h3 class="text-4xl ">Jawad Boulmal</h3>
                 </div>
-                <p>+212632773027</p>
+                <div class="col-span-1 flex flex-col text-sm profileInfo justify-end text-[10px] gap-2 mt-3">
+                    <p>Casablanca</p>
+                    <div class="Links flex gap-2">
+                        <a href="#" class="font-semibold hover:font-bold">linkdein</a>|
+                        <a href="#" class="font-semibold hover:font-bold">Email</a>|
+                        <a href="#" class="font-semibold hover:font-bold">Github</a>|
+                        <a href="#" class="font-semibold hover:font-bold">Portfolio</a>|
+                        <p class="font-semibold hover:font-bold">+212632773027</p>
+                    </div>
+                </div>
             </div>
             <div class="description col-span-3">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, aut excepturi aspernatur asperiores sequi maiores vel impedit autem laborum quisquam doloribus quo dolorem vitae a blanditiis quas voluptates sed qui?</p>
@@ -45,7 +47,7 @@
                         <li>Js</li>
                     </ul>
                 </div>
-                <div class="education">
+                <div id="" class="education">
                     <h3 class="text-2xl font-bold mb-3">Education</h3>
                     <ul class="grid gap-3">
                         <li>
@@ -60,19 +62,16 @@
                         </li>
                     </ul>
                 </div>
-                <div class="Language">
-                    <div class="education">
-                        <h3 class="text-2xl font-bold mb-3">Language</h3>
-                        <ul class="grid gap-3">
-                            <li>
-                                <p class="font-semibold">English(<span class="italic ">native</span>)</p>
-                                <p class="font-semibold">French(<span class="italic ">native</span>)</p>
-                            </li>
-                        </ul>
-                    </div>
+                <div id="languageSection" class="Language">
+                    <h3 class="text-2xl font-bold mb-3">Language</h3>
+                    <ul class="grid gap-3">
+                        <li>
+                            <p class="font-semibold">English(<span class="italic ">native</span>)</p>
+                            <p class="font-semibold">French(<span class="italic ">native</span>)</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="Skills">
-                    <div class="education">
+                <div id="certife" class="Certification">
                         <h3 class="text-2xl font-bold mb-3">Certifications</h3>
                         <ul class="grid gap-3">
                             <li>
@@ -81,7 +80,6 @@
                                 <p class="font-semibold">Js Certification <span class="italic"><a href="">URL</a></span></p>
                             </li>
                         </ul>
-                    </div>
                 </div>
             </div>
             <div class="thirdSection col-span-2 bg-slate-300 flex flex-col gap-5 p-[20px]">

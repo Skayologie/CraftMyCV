@@ -40,15 +40,13 @@ function addProfileDetails(ids,step){
     const website = document.getElementById("website").value;
     let isMatched = false
     
-    if (validation) {
-        CVInformations[0] = {
-            id : ids,
-            fullName: fullName,
-            email: email,
-            mobileNumber: mobileNumber,
-            linkdin: linkdin,
-            portfolio: website
-        }
+    CVInformations[0] = {
+        id : ids,
+        fullName: fullName,
+        email: email,
+        mobileNumber: mobileNumber,
+        linkdin: linkdin,
+        portfolio: website
     }
     
 // Add The Informations of the Experience Dynamic form To THe main array 
@@ -99,6 +97,7 @@ function addProfileDetails(ids,step){
                 id:ids,
                 certif: document.getElementById('CertifName'+ids).value,
                 organization: document.getElementById('CertifOrga'+ids).value,
+                urlCertif: document.getElementById('CertifURL'+ids).value,
             };
             CVInformations[5].push(newCertif);
         }
