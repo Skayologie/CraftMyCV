@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 window.addEventListener("click",()=>{
     console.log(CVInformations)
-    console.log(image.files)
-    console.log(reader.result)
+    // console.log(image.files)
+    // console.log(reader.result)
 
 })
 

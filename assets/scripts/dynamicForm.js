@@ -4,9 +4,10 @@
 //get all the buttons for creating the new form 
 let allDynamicForm = document.querySelectorAll(".dynamicForm");
 let AllInputsField = document.querySelectorAll(".inputFeild");
+let validation = false
 // let cardSection = document.querySelectorAll(".cardSection")
-// Array that store all informations from user
-let CVInformations = [
+// Array that store all informations from user 
+CVInformations = [
     profileDetails = {
         fullName: "" ,
         email: "" ,
@@ -26,26 +27,28 @@ let CVInformations = [
 // The Id Of The Input
 let id = 1; 
 var imgSrc = document.getElementById("image").value;
-console.log(imgSrc)
 
 // Function That Add Details to the CVInformations Array 
 function addProfileDetails(ids,step){                                                    
     const deleteButton = document.getElementById("Delete"+ids);
     const addButton = document.getElementById("ADD"+ids);
     const fullName = document.getElementById("fullName").value;
+    const position = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
     const mobileNumber = document.getElementById("numberPhone").value;
     const linkdin = document.getElementById("linkedin").value;
     const website = document.getElementById("website").value;
     let isMatched = false
     
-    CVInformations[0] = {
-        id : ids,
-        fullName: fullName,
-        email: email,
-        mobileNumber: mobileNumber,
-        linkdin: linkdin,
-        portfolio: website
+    if (validation) {
+        CVInformations[0] = {
+            id : ids,
+            fullName: fullName,
+            email: email,
+            mobileNumber: mobileNumber,
+            linkdin: linkdin,
+            portfolio: website
+        }
     }
     
 // Add The Informations of the Experience Dynamic form To THe main array 

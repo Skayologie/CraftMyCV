@@ -13,11 +13,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Include stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>CraftMyCV | CV Builder</title>
     
 </head>
@@ -31,7 +29,7 @@
             </div>
         </header>
         <!-- Main For The HomePage Hero Banner -->
-        <main id="heroPage" class=" z-20 bg-white mx-[100px] absolute flex h-[80vh]  max-h-[600px] ">
+        <main id="heroPage" class="z-20 bg-white mx-[100px] absolute flex h-[80vh]  max-h-[600px] ">
             <div class=" h-[100%] bg-blue- w-[80%] flex flex-col justify-center gap-4">
                 <div class="text-xl font-bold">
                     <p>33,201 resumes created today</p>
@@ -79,6 +77,15 @@
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
                                     <input  placeholder="JawadBoulmal" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="fullName">
+                                    <p id="fullNameERROR" class="text-red-700 hidden">Full Name Incorrect</p>
+                                </div>
+                            </div>
+                            <div class="inputItem w-[100%] flex flex-col gap-3  ">
+                                <div class="text-2xl font-bold">
+                                    <label for="">Position</label>
+                                </div>
+                                <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
+                                    <input placeholder="Web FullStack Developer" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="text" name="" id="position">
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -87,6 +94,7 @@
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
                                     <input  placeholder="jawadboulmal@gmail.com" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="email" name="" id="email">
+                                    <p id="emailERROR" class="text-red-700 hidden">Email Incorrect</p>
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -95,6 +103,7 @@
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
                                     <input placeholder="0632773027" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="number" name="" id="numberPhone">
+                                    <p id="phoneNumberERROR" class="text-red-700 hidden">Phone Number Incorrect</p>
                                 </div>
                             </div>
                             <div class="inputItem w-[100%] flex flex-col gap-3  ">
@@ -118,7 +127,8 @@
                                     <label for="">Image</label>
                                 </div>
                                 <div class="w-[100%] h-[40px] bg-[#E6E9F1]">
-                                    <input multiple accept="image/*" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="file" name="" id="image">
+                                    <input multiple accept="image/*" class="inputFeild font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1] photo" type="file" name="" id="image">
+                                    <p id="imageERROR" class="text-red-700 hidden">Image Is Required</p>
                                 </div>
                             </div>
                         </div>
@@ -266,51 +276,123 @@
         </main>
     </div>
 
- <div id="temp1" class="hidden z-10">
-    
-            <!-- Education Section -->
-            <div  class="bg-red-700 section">
-                <h2>Education</h2>
-                <ul>
-                    <li><span class="info">Bachelor's Degree in Computer Science</span> - University of Casablanca, 2020</li>
-                </ul>
-            </div>
-    
-            <!-- Skills Section -->
-            <div class="section">
-                <h2>Skills</h2>
-                <div class="skills">HTML</div>
-                <div class="skills">CSS</div>
-                <div class="skills">JavaScript</div>
-                <div class="skills">PHP</div>
-            </div>
-    
-            <!-- Languages Section -->
-            <div class="section">
-                <h2>Languages</h2>
-                <div class="languages">English</div>
-                <div class="languages">Arabic</div>
-            </div>
-    
-            <!-- Certifications Section -->
-            <div class="section">
-                <h2>Certifications</h2>
-                <ul>
-                    <li><span class="info">JavaScript Certification</span> - Codecademy, 2021</li>
-                    <li><span class="info">Web Development Fundamentals</span> - Coursera, 2020</li>
-                </ul>
-            </div>
+<div id="temp1" class="flex w-[80%] h-[100vh] overflow-y-scroll z-10">
 
-   
-    
- </div>
+    <div class="container text-[16px] bg-white w-[21cm] h-[29.7cm] p-[30px]">
+        <div id="details" class="firstSection grid grid-cols-3  gap-7">
+            
+        </div>
+        <div class="grid grid-cols-3 gap-7 mt-7">
+            <div class="secondSection col-span-1 grid gap-4">
+                <div class="Skills1">
+                    <h3 class="text-2xl font-bold">Skills</h3>
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Js</li>
+                    </ul>
+                </div>
+                <div class="education">
+                    <h3 class="text-2xl font-bold mb-3">Education</h3>
+                    <ul class="grid gap-3">
+                        <li>
+                            <p class="font-bold">Albuhturi - Casablanca</p>
+                            <p>20/20/2020</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quibusdam. Pariatur vero asperiores mollitia officia fuga, ipsa expedita magni iure error ea illum dicta saepe iste doloribus deleniti ipsam nam!</p>
+                        </li>
+                        <li>
+                            <p class="font-bold">Albuhturi - Casablanca</p>
+                            <p>20/20/2020</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quibusdam. Pariatur vero asperiores mollitia officia fuga, ipsa expedita magni iure error ea illum dicta saepe iste doloribus deleniti ipsam nam!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Language">
+                    <div class="education">
+                        <h3 class="text-2xl font-bold mb-3">Language</h3>
+                        <ul class="grid gap-3">
+                            <li>
+                                <p class="font-semibold">English(<span class="italic ">native</span>)</p>
+                                <p class="font-semibold">French(<span class="italic ">native</span>)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Skills">
+                    <div class="education">
+                        <h3 class="text-2xl font-bold mb-3">Certifications</h3>
+                        <ul class="grid gap-3">
+                            <li>
+                                <p class="font-semibold">HTML Certification <span class="italic"><a href="">URL</a></span></p>
+                                <p class="font-semibold">Css Certification <span class="italic"><a href="">URL</a></span></p>
+                                <p class="font-semibold">Js Certification <span class="italic"><a href="">URL</a></span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="thirdSection col-span-2 bg-slate-300 flex flex-col gap-5 p-[20px]">
+                <!-- ProExper -->
+                <div>
+                    <h2 class="mb-3 font-bold text-3xl">Professional Experience</h2>
+                    <div class="flex justify-between items-center mb-2">
+                        <div>
+                            <p class="font-semibold text-2xl">ListToGo - Siteweb</p>
+                            <p class="font-semibold " >FrontEnd Developer | Youssoufia</p>
+                        </div>
+                        <div class="">
+                            <p>20/20/2020</p>
+                        </div>
+                    </div>
+                    <div class="descriptionExper mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque similique maiores vel quae, commodi facilis ratione minima autem aspernatur, vero repudiandae dolores repellendus nisi recusandae vitae molestias adipisci laborum quisquam.</p>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-2">
+                        <div>
+                            <p class="font-semibold text-2xl">ListToGo - Siteweb</p>
+                            <p class="font-semibold " >FrontEnd Developer | Youssoufia</p>
+                        </div>
+                        <div class="">
+                            <p>20/20/2020</p>
+                        </div>
+                    </div>
+                    <div class="descriptionExper">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque similique maiores vel quae, commodi facilis ratione minima autem aspernatur, vero repudiandae dolores repellendus nisi recusandae vitae molestias adipisci laborum quisquam.</p>
+                    </div>
+                    
+                </div>
+                <!-- Education -->
+                <div>
+                    <h2 class="mb-3 font-bold text-3xl">Education</h2>
+                    <div class="flex justify-between items-center mb-2">
+                        <div>
+                            <p class="font-semibold text-2xl">Albuhturi - Casablanca</p>
+                            <p class="font-semibold " >16/20</p>
+                        </div>
+                        <div class="">
+                            <p>20/20/2020</p>
+                        </div>
+                    </div>
+                    <div class="descriptionExper mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque similique maiores vel quae, commodi facilis ratione minima autem aspernatur, vero repudiandae dolores repellendus nisi recusandae vitae molestias adipisci laborum quisquam.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+            
+</div>
 
 
     <!------------------------------- Javascript Scripts ----------------------------------->
     <script src="./assets/scripts/icons.js" crossorigin="anonymous"></script>
-    <script src="./assets/scripts/script.js"></script>
+    <script  type="module"  src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/dynamicForm.js"></script>
     <script src="assets/scripts/printCv.js"></script>
+    <script src="./assets/scripts/template1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </body>
 </html>

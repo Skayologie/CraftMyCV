@@ -1,9 +1,10 @@
 /* Define The Global Variables */
+// import regExpression from './regEx'
 // Get The Call Action Button And heroPage Section & The Main Form wich contain all inputs
 let startCreate = document.getElementById("startCreate");
 let HeroPage = document.getElementById("heroPage");
 let TheMainForm = document.getElementById("TheMainForm");
-
+let validation = false
 // The next & previous buttons
 const buttonNext = document.getElementById("btnNext");
 const buttonPrev = document.getElementById("btnPrev");
@@ -29,6 +30,55 @@ let ProgressBarPers = 100 / stepsArr.length ;
 // window.onbeforeunload = function() {
 //     return 0;
 // }
+
+function regExpression(regType,inputVal,InputId) {
+    if (regType === "email") {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        console.log(emailPattern.test(inputVal))
+        if (emailPattern.test(inputVal)) {
+            document.getElementById(InputId).style.display = "none"
+            return validation = true 
+        }else{
+            document.getElementById(InputId).style.display = "block"
+            return validation = false
+        }
+        
+    }
+    if (regType === "fullName") {
+        const fullNamePattern = /[a-zA-Z]{2,30}$/;
+        console.log(fullNamePattern.test(inputVal))
+        if (fullNamePattern.test(inputVal)) {
+            document.getElementById(InputId).style.display = "none"
+            return validation = true 
+        }else{
+            document.getElementById(InputId).style.display = "block"
+            return validation = false
+        }
+    }
+    if (regType === "phoneNumber") {
+        const phoneNumberPattern = /^\d{10}$/;
+        console.log(phoneNumberPattern.test(inputVal))
+        if (phoneNumberPattern.test(inputVal)) {
+            document.getElementById(InputId).style.display = "none"
+            return validation = true 
+        }else{
+            document.getElementById(InputId).style.display = "block"
+            return validation = false
+        }
+    }
+    if (regType === "image") {
+        if (inputVal != "") {
+            document.getElementById(InputId).style.display = "none"
+            return validation = true 
+        }else{
+            document.getElementById(InputId).style.display = "block"
+            return validation = false
+        }
+    }
+}  
+
+
+
 
 // Function To Go Or Back To The Section
 const DisplayNoneBlock = (option,optionCurrent)=>{
@@ -89,44 +139,51 @@ startCreate.addEventListener("click",()=>{
 
 // Event For The Next Button
 buttonNext.addEventListener("click", ()=>{
-    // Check The next Button 
-    if (step == 8) {
-        buttonNext.classList.add("cursor-not-allowed")
-        return
+    const email = document.getElementById("email").value;
+    const fullName = document.getElementById("fullName").value;
+    const phoneNumber = document.getElementById("numberPhone").value;
+    const image = document.getElementById("image").value;
+
+    regExpression("email",email,"emailERROR")
+    regExpression("fullName",fullName,"fullNameERROR")
+    regExpression("phoneNumber",phoneNumber,"phoneNumberERROR")
+    regExpression("image",image,"imageERROR")
+    if (validation) {
+        // Change The Title Progress To Right Title With The Step Index
+        titleProg.innerHTML = stepsArr[step];
+        
+        // Create The Id Of The Current Step 
+        let currentStep = "step"+step;
+        
+        // Incrimment The Step
+        step++;
+        
+        // Create The Id Of The Next Step 
+        let NextStep = "step"+step;
+        DisplayNoneBlock(NextStep,currentStep)
+        
+        // Made A progress Bar Transition
+        progressBar.style.transition = "1s ease-in-out ";
+        
+        // Check The Previous Button 
+        if (step == 1) {
+            buttonPrev.classList.add("cursor-not-allowed")
+        }else{
+            buttonPrev.classList.remove("cursor-not-allowed")
+        }
+        
+        // Check The next Button After
+        if (step == 8) {
+            buttonNext.classList.add("cursor-not-allowed")
+        }else{
+            buttonNext.classList.remove("cursor-not-allowed")
+        }
+        checkPrevButton()
+        checkNextButton()
     }else{
-        buttonNext.classList.remove("cursor-not-allowed")
-    }
-    // Change The Title Progress To Right Title With The Step Index
-    titleProg.innerHTML = stepsArr[step];
-    
-    // Create The Id Of The Current Step 
-    let currentStep = "step"+step;
-    
-    // Incrimment The Step
-    step++;
-    
-    // Create The Id Of The Next Step 
-    let NextStep = "step"+step;
-    DisplayNoneBlock(NextStep,currentStep)
-    
-    // Made A progress Bar Transition
-    progressBar.style.transition = "1s ease-in-out ";
-    
-    // Check The Previous Button 
-    if (step == 1) {
-        buttonPrev.classList.add("cursor-not-allowed")
-    }else{
-        buttonPrev.classList.remove("cursor-not-allowed")
+        console.log('there is a problem here')
     }
     
-    // Check The next Button After
-    if (step == 8) {
-        buttonNext.classList.add("cursor-not-allowed")
-    }else{
-        buttonNext.classList.remove("cursor-not-allowed")
-    }
-    checkPrevButton()
-    checkNextButton()
 });
 
 
@@ -189,5 +246,4 @@ template1.onclick = () =>{
     TemplateChoosed = 1 ;
     console.log(TemplateChoosed)
 }
-
 
