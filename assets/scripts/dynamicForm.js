@@ -52,7 +52,6 @@ function addProfileDetails(ids,step){
 // Add The Informations of the Experience Dynamic form To THe main array 
     if(!isMatched){
         if(step === "proExp") {
-            let ValideSum2 = 0
             let newExperience = {
                 id:ids,
                 title: document.getElementById('titleInputExper'+ids).value,
@@ -105,18 +104,15 @@ function addProfileDetails(ids,step){
         if(step === "summary"){
             let summary = document.getElementById('summary10000').value
             CVInformations[6] = summary
-            console.log(summary)
-
             const data = readFileSync('data.json');
             const jsonData = JSON.parse(data);
-
-            console.log(jsonData)
         }
         deleteButton.classList.remove("hidden")
         addButton.classList.add('hidden')
         ids++
     }
 }
+
 
 // function toggle just for styling the cards
 function justToggle(cardClicked,section) {
@@ -128,6 +124,28 @@ function justToggle(cardClicked,section) {
 function ChangeTheCardName(e , title ){
     document.querySelector(title).innerHTML = e.value
 }
+
+// Functions for delete The Dynamic Form Sections
+function RepeatFor(id , step ,Currentstep , ArrayInfo , buttonToggle , cardToggle){
+    if (step === Currentstep) {
+        
+        ArrayInfo.forEach((element , i) => {
+            if(element.id === id){
+                ArrayInfo.splice(i,1)
+                document.getElementById(buttonToggle+id).style.display ="none"
+                document.getElementById(cardToggle+id).classList.toggle("hidden") 
+            }
+        });
+    }
+}
+function DeleteProfileDetails(id,step){
+    RepeatFor(id , step , "proExp" , CVInformations[1] , "Experience" , "cardExperience")
+    RepeatFor(id , step , "edu" , CVInformations[2] , "Education" , "cardEducation")
+    RepeatFor(id , step , "skills" , CVInformations[3] , "Skills" , "cardSkills")
+    RepeatFor(id , step , "lang" , CVInformations[4] , "Languages" , "cardLanguages")
+    RepeatFor(id , step , "certif" , CVInformations[5] , "Certifications" , "cardCertifications")
+}
+
 
 for (const element of allDynamicForm) {  
 
@@ -310,7 +328,7 @@ for (const element of allDynamicForm) {
                                  </div>
                                  <div style="height:45px; " class="bg-red-500 col-span-1 " >
                                     <input onclick="addProfileDetails(${id} , 'skills')" style="border-radius: 6px;background-color:rgb(26 145 240);color:white;" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="save" id="ADD${id}">
-                                    <input onclick="DeleteProfileDetails(${id})" style="border-radius: 6px;background-color:red;color:white;" class="hidden font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
+                                    <input onclick="DeleteProfileDetails(${id} , 'skills' )" style="border-radius: 6px;background-color:red;color:white;" class="hidden font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
                                 </div>
                              </div>
             `;
@@ -351,7 +369,7 @@ for (const element of allDynamicForm) {
                             </div>
                             <div style="height:45px; " >
                                 <input onclick="addProfileDetails(${id} ,'lang')" style="border-radius: 6px;background-color:rgb(26 145 240);color:white;" class="font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="save" id="ADD${id}">
-                                <input onclick="DeleteProfileDetails(${id})" style="border-radius: 6px;background-color:red;color:white;" class="hidden font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
+                                <input onclick="DeleteProfileDetails(${id},'lang')" style="border-radius: 6px;background-color:red;color:white;" class="hidden font-semibold text-1xl pl-[10px] w-[100%] h-[100%] bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
                             </div>
                             
                             
@@ -406,7 +424,7 @@ for (const element of allDynamicForm) {
                                 
                                 <div class="h-[100%] col-span-1 " >
                                     <input onclick="addProfileDetails(${id},'certif')" style="border-radius: 6px;background-color:rgb(26 145 240);color:white;" class="h-[45px] font-semibold text-1xl pl-[10px] w-[100%]  bg-[#E6E9F1]" type="button" value="save" id="ADD${id}">
-                                    <input onclick="DeleteProfileDetails(${id})" style="border-radius: 6px;background-color:red;color:white;" class="hidden h-[45px]  bottom-0 font-semibold text-1xl pl-[10px] w-[100%]  bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
+                                    <input onclick="DeleteProfileDetails(${id},'certif')" style="border-radius: 6px;background-color:red;color:white;" class="hidden h-[45px]  bottom-0 font-semibold text-1xl pl-[10px] w-[100%]  bg-[#E6E9F1]" type="button" value="Delete" id="Delete${id}">
                                 </div>
                                 
                                 
@@ -418,4 +436,3 @@ for (const element of allDynamicForm) {
     });
 }
 
-// 

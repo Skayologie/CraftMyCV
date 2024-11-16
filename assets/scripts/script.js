@@ -28,9 +28,9 @@ let ProgressBarPers = 100 / stepsArr.length ;
 //******************************** Define The Functions *****************************************/
 // Event To Check the refresh Of The Page Before It Refreshed
 // this function will disaled in the dev period
-// window.onbeforeunload = function() {
-//     return 0;
-// }
+window.onbeforeunload = function() {
+    return 0;
+}
 
 
 // Function To Go Or Back To The Section
@@ -97,7 +97,6 @@ buttonNext.addEventListener("click", ()=>{
     const phoneNumber = document.getElementById("numberPhone").value;
     const image = document.getElementById("image").value;
     Regex()
-    console.log(ValideSum)
     if (ValideSum === 5) {
         // Change The Title Progress To Right Title With The Step Index
         titleProg.innerHTML = stepsArr[step];
@@ -187,7 +186,6 @@ template1.onclick = () =>{
     chooseHove1.classList.remove("hidden")
     chooseHover2.classList.add("hidden")
     TemplateChoosed = 1 ;
-    console.log(TemplateChoosed)
 }
 
 
@@ -224,5 +222,4 @@ function Regex(){
     RegexTemplate(numberPhone,phonePattern)
     RegexTemplate(positiInput,positionPattern)
     RegexTemplate(website,websitePattern)
-
 }
